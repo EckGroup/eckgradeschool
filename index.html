@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eck Grade School - Course Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .course-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .program-tab {
+            transition: all 0.3s ease;
+        }
+        .program-tab:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .program-tab.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 3px solid white;
+        }
+        .checkbox-option {
+            transition: all 0.2s ease;
+        }
+        .checkbox-option:hover {
+            background-color: #f0f9ff;
+        }
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="bg-white rounded-full p-2 mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold">Eck Grade School</h1>
+                        <p class="text-blue-100">Premium International Education Provider</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fas fa-phone-alt mr-1"></i> +233 57 416 8196
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fas fa-envelope mr-1"></i> info@eckgradeschool.edu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Enroll in Our Premium Programs</h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Choose from our internationally recognized curricula: IB, IGCSE, and A-Levels. 
+                Prepare for global success with our diverse course offerings.
+            </p>
+            <a href="#registration" class="bg-white text-blue-600 font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition animate-pulse inline-block">
+                Register Now <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Academic Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- IB Program -->
+                <div class="course-card bg-white rounded-lg overflow-hidden border border-gray-200">
+                    <div class="bg-blue-600 text-white p-4">
+                        <h3 class="text-xl font-bold">IB Curriculum</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            The International Baccalaureate offers a holistic education for students aged 3-19, 
+                            developing inquiring, knowledgeable and caring young people.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Internationally recognized</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Holistic learning approach</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Develops critical thinking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- IGCSE Program -->
+                <div class="course-card bg-white rounded-lg overflow-hidden border border-gray-200">
+                    <div class="bg-green-600 text-white p-4">
+                        <h3 class="text-xl font-bold">IGCSE Programs</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Cambridge IGCSE is the world's most popular international qualification for 14 to 16 year olds, 
+                            recognized by leading universities and employers worldwide.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Flexible curriculum</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>70+ subjects available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Internationally benchmarked</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- A-Level Program -->
+                <div class="course-card bg-white rounded-lg overflow-hidden border border-gray-200">
+                    <div class="bg-purple-600 text-white p-4">
+                        <h3 class="text-xl font-bold">A-Level Programs</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Cambridge International AS & A Levels are internationally benchmarked qualifications 
+                            providing excellent preparation for university education.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>University preparation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>55+ subjects available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Flexible subject combinations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Course Registration</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <!-- Program Tabs -->
+                <div class="flex border-b border-gray-200">
+                    <button onclick="showProgram('ib')" class="program-tab active flex-1 py-4 px-6 text-center font-medium text-blue-600">
+                        <i class="fas fa-globe-americas mr-2"></i> IB Curriculum
+                    </button>
+                    <button onclick="showProgram('igcse')" class="program-tab flex-1 py-4 px-6 text-center font-medium text-green-600">
+                        <i class="fas fa-certificate mr-2"></i> IGCSE Programs
+                    </button>
+                    <button onclick="showProgram('alevel')" class="program-tab flex-1 py-4 px-6 text-center font-medium text-purple-600">
+                        <i class="fas fa-university mr-2"></i> A-Level Programs
+                    </button>
+                </div>
+                
+                <!-- Registration Form -->
+                <div class="p-6 md:p-8">
+                    <form id="registrationForm" class="space-y-6">
+                        <!-- Student Information -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Student Information</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                                    <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth*</label>
+                                    <input type="date" id="dob" name="dob" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="currentSchool" class="block text-sm font-medium text-gray-700 mb-1">Current School</label>
+                                    <input type="text" id="currentSchool" name="currentSchool" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="grade" class="block text-sm font-medium text-gray-700 mb-1">Current Grade Level*</label>
+                                    <select id="grade" name="grade" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        <option value="">Select Grade</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Program Selection -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Program Selection*</h3>
+                            <div class="flex flex-col space-y-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="program" value="IB Curriculum" checked class="form-radio h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">IB Curriculum</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="program" value="IGCSE Programs" class="form-radio h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">IGCSE Programs</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="program" value="A-Level Programs" class="form-radio h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">A-Level Programs</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Selection (IB) -->
+                        <div id="ibCourses" class="course-selection">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Select IB Courses*</h3>
+                            <p class="text-gray-600 mb-4">Please select at least 3 courses (maximum of 6)</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="French" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">French</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Spanish" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Spanish</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="English" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">English</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Mathematics" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Mathematics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="ICT" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">ICT</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Computer Science" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Computer Science</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Biology" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Biology</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Chemistry" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Chemistry</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Physics" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Physics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Geography" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Geography</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Business Studies" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Business Studies</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="Economics" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">Economics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="ibCourses" value="History" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="ml-2 text-gray-700">History</span>
+                                </label>
+                            </div>
+                            <div class="mt-4">
+                                <label for="ibOther" class="block text-sm font-medium text-gray-700 mb-1">Other Course (not listed above)</label>
+                                <input type="text" id="ibOther" name="ibOther" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        
+                        <!-- Course Selection (IGCSE) -->
+                        <div id="igcseCourses" class="course-selection hidden">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Select IGCSE Courses*</h3>
+                            <p class="text-gray-600 mb-4">Please select at least 5 courses (maximum of 10)</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="French" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">French</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Spanish" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Spanish</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="English" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">English</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Mathematics" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Mathematics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="ICT" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">ICT</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Computer Science" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Computer Science</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Biology" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Biology</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Chemistry" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Chemistry</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Physics" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Physics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Geography" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Geography</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Business Studies" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Business Studies</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="Economics" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">Economics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="igcseCourses" value="History" class="form-checkbox h-5 w-5 text-green-600">
+                                    <span class="ml-2 text-gray-700">History</span>
+                                </label>
+                            </div>
+                            <div class="mt-4">
+                                <label for="igcseOther" class="block text-sm font-medium text-gray-700 mb-1">Other Course (not listed above)</label>
+                                <input type="text" id="igcseOther" name="igcseOther" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                            </div>
+                        </div>
+                        
+                        <!-- Course Selection (A-Level) -->
+                        <div id="alevelCourses" class="course-selection hidden">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Select A-Level Courses*</h3>
+                            <p class="text-gray-600 mb-4">Please select 3-4 courses</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="French" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">French</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Spanish" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Spanish</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="English" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">English</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Mathematics" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Mathematics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="ICT" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">ICT</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Computer Science" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Computer Science</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Biology" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Biology</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Chemistry" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Chemistry</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Physics" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Physics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Geography" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Geography</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Business Studies" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Business Studies</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="Economics" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">Economics</span>
+                                </label>
+                                <label class="checkbox-option flex items-center p-3 border border-gray-200 rounded-md cursor-pointer">
+                                    <input type="checkbox" name="alevelCourses" value="History" class="form-checkbox h-5 w-5 text-purple-600">
+                                    <span class="ml-2 text-gray-700">History</span>
+                                </label>
+                            </div>
+                            <div class="mt-4">
+                                <label for="alevelOther" class="block text-sm font-medium text-gray-700 mb-1">Other Course (not listed above)</label>
+                                <input type="text" id="alevelOther" name="alevelOther" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Information -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Additional Information</h3>
+                            <div>
+                                <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-1">Special Requirements or Notes</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button type="button" onclick="submitForm()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 flex items-center justify-center">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i> Submit via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Eck Grade School</h3>
+                    <p class="text-blue-100">
+                        Providing premium international education with IB, IGCSE, and A-Level programs to prepare students for global success.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +233 57 416 8196
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> info@eckgradeschool.edu
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Accra, Ghana
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">Home</a></li>
+                        <li><a href="#registration" class="text-blue-100 hover:text-white transition">Register</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">Programs</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-400 mt-8 pt-6 text-center text-blue-100">
+                <p>&copy; 2023 Eck Grade School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                    <i class="fas fa-check text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mt-3">Registration Successful!</h3>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-500">Your course registration has been submitted successfully. We'll contact you shortly.</p>
+                </div>
+                <div class="mt-4">
+                    <button onclick="closeModal()" type="button" class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the selected program's courses
+        function showProgram(program) {
+            // Hide all course sections
+            document.querySelectorAll('.course-selection').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.program-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the selected program's courses
+            document.getElementById(program + 'Courses').classList.remove('hidden');
+            
+            // Add active class to the clicked tab
+            event.target.classList.add('active');
+            
+            // Update the radio button selection
+            document.querySelector(`input[name="program"][value="${program === 'ib' ? 'IB Curriculum' : program === 'igcse' ? 'IGCSE Programs' : 'A-Level Programs'}"]`).checked = true;
+        }
+        
+        // Submit form to WhatsApp
+        function submitForm() {
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const dob = document.getElementById('dob').value;
+            const currentSchool = document.getElementById('currentSchool').value;
+            const grade = document.getElementById('grade').value;
+            const program = document.querySelector('input[name="program"]:checked').value;
+            
+            // Get selected courses based on program
+            let courses = [];
+            let otherCourse = '';
+            
+            if (program === 'IB Curriculum') {
+                document.querySelectorAll('input[name="ibCourses"]:checked').forEach(cb => {
+                    courses.push(cb.value);
+                });
+                otherCourse = document.getElementById('ibOther').value;
+            } else if (program === 'IGCSE Programs') {
+                document.querySelectorAll('input[name="igcseCourses"]:checked').forEach(cb => {
+                    courses.push(cb.value);
+                });
+                otherCourse = document.getElementById('igcseOther').value;
+            } else {
+                document.querySelectorAll('input[name="alevelCourses"]:checked').forEach(cb => {
+                    courses.push(cb.value);
+                });
+                otherCourse = document.getElementById('alevelOther').value;
+            }
+            
+            const additionalInfo = document.getElementById('additionalInfo').value;
+            
+            // Validate required fields
+            if (!fullName || !email || !phone || !dob || !grade || courses.length === 0) {
+                alert('Please fill in all required fields and select at least one course.');
+                return;
+            }
+            
+            // Validate course selection based on program
+            if (program === 'IB Curriculum' && (courses.length < 3 || courses.length > 6)) {
+                alert('For IB Curriculum, please select between 3 to 6 courses.');
+                return;
+            } else if (program === 'IGCSE Programs' && (courses.length < 5 || courses.length > 10)) {
+                alert('For IGCSE Programs, please select between 5 to 10 courses.');
+                return;
+            } else if (program === 'A-Level Programs' && (courses.length < 3 || courses.length > 4)) {
+                alert('For A-Level Programs, please select 3 or 4 courses.');
+                return;
+            }
+            
+            // Prepare WhatsApp message
+            let message = `New Course Registration:\n\n`;
+            message += `*Name:* ${fullName}\n`;
+            message += `*Email:* ${email}\n`;
+            message += `*Phone:* ${phone}\n`;
+            message += `*Date of Birth:* ${dob}\n`;
+            message += `*Current School:* ${currentSchool || 'Not provided'}\n`;
+            message += `*Grade Level:* ${grade}\n\n`;
+            message += `*Program:* ${program}\n`;
+            message += `*Selected Courses:* ${courses.join(', ')}\n`;
+            if (otherCourse) message += `*Other Course:* ${otherCourse}\n`;
+            if (additionalInfo) message += `*Additional Info:* ${additionalInfo}\n`;
+            
+            // Encode message for WhatsApp URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Open WhatsApp with the message
+            window.open(`https://wa.me/233574168196?text=${encodedMessage}`, '_blank');
+            
+            // Show success modal
+            document.getElementById('successModal').classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('registrationForm').reset();
+        }
+        
+        // Close modal
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
